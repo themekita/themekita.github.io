@@ -539,7 +539,7 @@ footer a:hover{
 
 @media screen and (min-width: 768px){
 	.comments{
-		padding: 20px 15px;
+		padding: 20px 30px;
 	}
 }
 
@@ -685,7 +685,7 @@ footer a:hover{
 		text-align: center;
 	}
 	.comments{
-		padding: 20px 50px;
+		padding: 20px 15px;
 	}
 	.donate-quote{
 		font-size: 15px;

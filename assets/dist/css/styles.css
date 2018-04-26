@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700');
+
 body{
-	background: #fafafa;
+	background: #fbfbfb;
+	font-family: 'Rubik', sans-serif;
 }
 
 header {
@@ -9,13 +12,16 @@ header {
 	box-shadow: 0 3px 2px -2px rgba(200,200,200,.15);
 	border-bottom: 1px solid #f0f0f1;
 	position: relative;
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 }
 
 header .overlay{
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: rgba(0, 0, 0, 0.8);
+	background: rgba(103, 58, 183, 0.92);
 	z-index: 0;
 	content: '';
 	top: 0;
@@ -87,21 +93,23 @@ header .content{
 	padding: 70px 0;
 }
 
+.jumbotron-center {
+	text-align: center;
+}
+
 .jumbotron h1{
-	font-size: 33px;
+	font-size: 32px;
 	font-weight: 700;
 	color: #fff;
-	width: fit-content;
 	padding: 10px 0px;
 	margin-bottom: 15px;
 }
 
 .jumbotron .sub-title{
-	font-size: 1.15rem;
+	font-size: 1.12rem;
 	line-height: 1.65;
-	font-weight: 400;
+	font-weight: 300;
 	color: #fff;
-	width: fit-content;
 	border-radius: 3px;
 	padding: 10px 0;
 	margin-bottom: 15px;
@@ -116,16 +124,27 @@ header .content{
 	text-align: center;
 }
 
-.jumbotron .sub-title b{
-	color: #f7633b !important;
-}
-
 main{
 	padding: 100px 50px 0;
 	position: relative;
 }
 
-.product-header {
+.container-index {
+	padding: 50px 0;
+}
+
+.container-index .product-header {
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 1;
+	color: #bbbaba;
+	overflow: hidden;
+	top: 0;
+	margin-bottom: 34px;
+	letter-spacing: 1px;
+}
+
+.container-product .product-header {
 	position: absolute;
 	font-weight: 700;
 	font-size: 65px;
@@ -142,12 +161,12 @@ main{
 	background: #fff;
 	padding: 50px 65px;
 	border-radius: 5px;
-	box-shadow: 0 1px 3px 0 rgba(0,0,0,.16);
+	box-shadow: 0 1px 10px 0 rgba(0,0,0,.16);
 	transition: all .5s;
 	margin-bottom: 30px;
 }
 
-.product-latest:hover, .product-show:hover {
+/*.product-latest:hover, .product-show:hover {
 	box-shadow: 0 4px 10px 0 rgba(0,0,0,.16), 0 5px 10px 0 rgba(0,0,0,.08);
 }
 .product-latest:hover .img-preview, .product-show:hover .img-preview, .content-box:hover .img-preview {
@@ -155,6 +174,10 @@ main{
 }
 .product-latest:hover .info-product, .product-show:hover .info-product, .content-box:hover .info-product {
 	transform: translateX(20px);
+}
+*/
+.product-latest .img-box {
+	padding: 0px;
 }
 .product-latest .img-box, .product-show .img-box, .content-box .img-box {
 	position: relative;
@@ -165,32 +188,37 @@ main{
 }
 .product-latest .img-preview, .product-show .img-preview, .content-box .img-preview {
 	width: 100%;
-	border-radius: 5px;
-	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.075);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.075);
 	transition: all .5s;
+}
+.product-latest .info-product {
+	padding: 0 20px;
 }
 .product-latest .info-product, .product-show .info-product, .content-box .info-product {
 	transition: all .5s;
 }
 .product-latest h3, .product-show h3, .content-box h3 {
-	color: #222;
-	font-size: 31px;
-	font-weight: 700;
+	color: #313030;
+	font-size: 20px;
+	font-weight: 500;
 	line-height: 1.65;
+	margin-top: 20px;
 }
 .product-latest a:hover{
 	text-decoration: none;
 }
 .product-latest .sub-info, .product-show .sub-info, .content-box .sub-info {
 	color: #555;
-	font-size: 18px;
+	font-size: 15px;
 	font-weight: 300;
 	line-height: 1.65;
 	margin-bottom: 15px;
 }
 .product-latest .price, .product-show .price, .content-box .price {
 	color: #555;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 300;
 	line-height: 1.65;
 	margin-bottom: 15px;
@@ -199,12 +227,14 @@ main{
 .product-latest .btn, .content-box .btn {
 	opacity: 1;
 	transition: all .4s;
+	font-size: 13px;
 }
 .product-latest .btn:hover, .content-box .btn:hover {
 	opacity: 0.8;
 }
 
 .product-latest{
+	padding: 0 15px 20px;
 	position: relative;
 }
 
@@ -212,7 +242,7 @@ main{
 	border-color: #ddd;
 	color:  #555;
 	font-weight: 400;
-	padding: 8px 20px;
+	padding: 8px 15px;
 }
 
 .btn-detail:hover{
@@ -224,7 +254,7 @@ main{
 	border-color: #f7633b;
 	color: #fff;
 	font-weight: 400;
-	padding: 8px 20px;
+	padding: 8px 15px;
 }
 
 .btn-livepreview:hover{
@@ -247,7 +277,7 @@ main{
 .list-name{
 	font-size: 20px;
 	margin-top: 5px;
-	font-weight: 600;
+	font-weight: 400;
 	color: #222;
 	margin-bottom: 10px;
 }
@@ -352,7 +382,7 @@ ul.testimonial-people li:hover .img-people:before{
 footer {
 	padding: 30px 0;
 	color: #4c4b4b;
-	background: #e8e8e8;
+	background: #f3f3f3;
 	font-size: 15px;
 }
 
@@ -391,9 +421,22 @@ footer a:hover{
 	background: transparent;
 	border: 0px;
 	padding: 30px 0;
-	margin-top: 15px;
-	margin-bottom: 0px;
+	margin-top: 0px;
+	margin-bottom: 15px;
 	box-shadow: none;
+}
+
+.product-show h3 {
+	font-size: 30px;
+	margin-top: 0px;
+}
+
+.product-show .img-preview {
+	border-radius: 5px;
+}
+
+.product-show .sub-info {
+	font-size: 17px;
 }
 
 .product-show:hover{
@@ -553,7 +596,7 @@ footer a:hover{
 	.navbar-brand-image {
 		height: 37px;
 	}
-	.product-latest, .content-box {
+	.content-box {
 		padding: 40px 30px;
 	}
 	.product-latest:hover .info-product{
@@ -563,7 +606,7 @@ footer a:hover{
 		padding: 40px 0;
 	}
 	.product-latest h3, .product-show h3, .content-box h3{
-		font-size: 24px;
+		font-size: 20px;
 	}
 	.share h3{
 		font-size: 22px !important;
@@ -582,9 +625,6 @@ footer a:hover{
 }
 
 @media screen and (max-width: 768px){
-	.navbar-top{
-		background: rgba(0, 0, 0, 0.84) !important;
-	}
 	.navbar-brand-image{
 		height: 32px;
 	}
@@ -617,8 +657,8 @@ footer a:hover{
 }
 
 @media screen and (max-width: 575px) {
-	header .overlay{
-		background: rgba(0, 0, 0, 0.78);
+	.container-index {
+		padding: 50px 15px;
 	}
 	.jumbotron {
 		padding: 50px 0;
@@ -634,12 +674,12 @@ footer a:hover{
 	main{
 		padding: 80px 50px 0;
 	}
-	.product-header{
+	.container-product .product-header{
 		left: 25px;
 		font-size: 40px;
 		margin-top: 48px;
 	}
-	.product-latest, .content-box {
+.content-box {
 		padding: 20px;
 		border: 0;
 	}
